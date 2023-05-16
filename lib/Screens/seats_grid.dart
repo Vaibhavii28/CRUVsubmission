@@ -1,6 +1,7 @@
 import 'package:cruv_submission/provider/selected_provider.dart';
 import 'package:cruv_submission/utils/constants.dart';
 import 'package:cruv_submission/widgets/SearchBar.dart';
+import 'package:cruv_submission/widgets/legend.dart';
 import 'package:cruv_submission/widgets/seat.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -23,6 +24,7 @@ class SeatsGrid extends StatelessWidget {
         body: SingleChildScrollView(
           child: Column(children: [
             const SeatSearchBar(),
+            legend(),
             Consumer<SelectedProvider>(builder: (context, value, child) {
               return Container(
                 color: const Color(0xFFf6f6f6),
@@ -112,7 +114,7 @@ class SeatsGrid extends StatelessWidget {
           ],
         ),
         const SizedBox(
-          height: 20,
+          height: 10,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
